@@ -1,4 +1,4 @@
-# --------------------Appdev Development Project 2020------------------------
+# --------------Appdev Development Project 2020-------------
 
 # This project is for I-IT-1N students to understand what procedure and what tools are needed in an application development.
 
@@ -35,10 +35,14 @@ Table of contents:
 	In this section you need to offer a list of files included in this 
 	application. In our case, so far, the list many look this:
 
-	README.md :	this file
-	screen.c :	contains screen manipulation functions
-	screen.h :	contains screen function declarations and related constants
-	...
+	README.md :	this file.
+	screen.c :	contains screen manipulation functions.
+	screen.h :	contains screen function declarations and related constants.
+	comm.c :	contains functions for client-server.
+	comm.h :	contains comm function delarations and related constants.
+	makefile :	compile the file.
+	testcurl.c :	contains functions for transferring data.
+	testscreen.c :	contains the application itilizing the above functions.
 
 5. Copyright and licensing information.
 	This application follows GPLv2 license.

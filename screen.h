@@ -25,3 +25,4 @@ void gotoXY(int, int);
 void drawbar(int, int);
 void drawobject(int,int);
 Position getscreensize(void); //this function returns a compound date(2 ints)
+int devicestatus(void);

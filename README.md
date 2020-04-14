@@ -1,4 +1,4 @@
-# appdev project 2020
+# --------------------Appdev Development Project 2020------------------------
 
 # This project is for I-IT-1N students to understand what procedure and what tools are needed in an application development.
 
@@ -8,14 +8,15 @@ General Description of the Application
 	Always indent for paragraphs.
 
 
-Table of contents
-1. Configuration instructions.
-2. Installation instructions.
-3. Operating instructions.
-4. File manifest.
-5. Copyright and licensing information.
-6. Contact information.
-7. Credits and acknowledgements.
+Table of contents:
+
+	1. Configuration instructions.
+	2. Installation instructions.
+	3. Operating instructions.
+	4. File manifest.
+	5. Copyright and licensing information.
+	6. Contact information.
+	7. Credits and acknowledgements.
 
 
 1. Configuration instructions.

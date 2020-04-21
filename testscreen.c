@@ -72,6 +72,7 @@ int main(void){
 	FILE *fp;
 	fp = fopen("test.wav", "r");
 	WAVheader h = readwavhdr(fp);
-	fclose(fp);
 	displayWAVhdr(h);
+	wavdata(h, fp);
+	fclose(fp);
 }

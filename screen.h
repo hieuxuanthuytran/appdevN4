@@ -1,4 +1,10 @@
-#define ESC 27
+// usually in a header file we have 2 parts:
+// 1. function declarations
+// 2. constant definitions
+
+// constant definitions
+#define ESC 27		// or using hex 0x1B
+// make enumeration for fg colors
 enum FG {BLACK=30,RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE};
 #define bg(c) (c+10)
 
@@ -15,7 +21,10 @@ typedef struct{
 	int row;
 	int col;
 }Position;
+// making a constant in a name will make your program more meaningful/readable
+// now we can use color names in function setfgcolor()
 
+// function declarations
 void setfgcolor(int);
 void setbgcolor(int);
 void resetcolors(void);
@@ -24,5 +33,5 @@ void clearscreen(void);
 void gotoXY(int, int);
 void drawbar(int, int);
 void drawobject(int,int);
-Position getscreensize(void); //this function returns a compound date(2 ints)
+Position getscreensize(void);	 //this function returns a compound date(2 ints)
 int devicestatus(void);

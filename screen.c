@@ -1,6 +1,13 @@
+// in this file we are going to define a number of functions for screen
+// manipulation. These functions include erase screen, set color attributes,
+// set cursor location, etc.. using VT100 escape sequences.
+// move between files: alt_., alt_,
+// follow this reference: http://www.termsys.demon.co.uk/vtansi.htm
+// to paste tp putty: shift_insert key
 #include <stdio.h>
 #include "screen.h"
 
+// function definition
 int devicestatus(void){
 	printf("%c[5n", ESC);
 	char status[40];
@@ -40,7 +47,7 @@ void drawbar(int col, int height){
 	int i;
 	for(i=1; i <= height; i++){
 		gotoXY(35-i, col);
-#ifdef UNICODE   //following codes are in conditional compilation
+#ifdef UNICODE   // following codes are in conditional compilation
 		printf("%s", BAR);
 #else
 		printf("%c", '#');
@@ -57,18 +64,18 @@ void drawobject(int row,int col){
 
 Position getscreensize(void){
 	Position p;
-	char ret[100] = "\0";//make an emty string for query return
+	char ret[100] = "\0";// make an emty string for query return
 	int r, c;
-	gotoXY(999, 999);  //move cursor to the right-bottom corner
-	printf("%c[6n", ESC);//send query sequence to the terminal
+	gotoXY(999, 999);  // move cursor to the right-bottom corner
+	printf("%c[6n", ESC);// send query sequence to the terminal
 	scanf("%s", ret);
 #ifdef DEBUG
 	printf("%s\n", ret);
 #endif
 #include <string.h>
-	//the following code will decode the return string from terminal
+	// the following code will decode the return string from terminal
 	if(strlen(ret)>0){
-		char dum; //dummy char to consume the chars in ret string
+		char dum; // dummy char to consume the chars in ret string
 		sscanf(ret, "%c%c%d%c%d%c", &dum, &dum, &r, &dum, &c, &dum);
 		p.row = r;
 		p.col = c;

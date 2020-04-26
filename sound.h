@@ -1,6 +1,6 @@
 // in this file we define related constants and declare functions
 // for handling sound
-//#define SDEBUG
+// #define SDEBUG
 // define sound structure (deal with .wav file)
 
 typedef struct{

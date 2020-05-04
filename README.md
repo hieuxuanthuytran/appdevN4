@@ -101,8 +101,8 @@ In Linux:
 	
 # 6. Contact information.
 
-My name: Hieu Xuan Thuy Tran
-My email address: tranhieuxuanthuy@gmail.com
+- My name: Hieu Xuan Thuy Tran
+- My email address: tranhieuxuanthuy@gmail.com
 	
 # 7. Credits and acknowledgments.
 

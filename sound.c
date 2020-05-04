@@ -23,12 +23,14 @@ void displayWAVhdr(WAVheader h){
 
 }
 
+/*	In this function we will read sound samples from the opened file
+	the samples are calculated in to decibel value using Root Mean Square
+	(RMS) formula. We will display a 5-sec recorded sound into bar chart
+	our sound file uses sample rate of 16000, for 5 seconds, there are
+	5*16000 = 800000 samples, we want to display them into 160 bars */
+
 void wavdata(WAVheader h, FILE *fp){
-	// in this function we will read sound samples from the opened file
-	// the samples are calculated in to decibel value using Root Mean Square
-	// (RMS) formula. We will display a 5-sec recorded sound into bar chart
-	// our sound file uses sample rate of 16000, for 5 seconds, there are
-	// 5*16000 = 800000 samples, we want to display them into 160 bars
+	
 	short samples[500];		// to read 500 samples from wav file
 	int peaks=0, flag=0; 
 	float dBValueMax=0;
@@ -40,11 +42,13 @@ void wavdata(WAVheader h, FILE *fp){
 			sum = sum + samples[j]*samples[j];
 		}
 		double re = sqrt(sum/500);
+		
 #ifdef SDEBUG
+
 	printf("db[%d] = %f\n", i+1, 20*log10(re));
 
 #else
-		// displaybar for re value
+		// display bar for re value
 	
 	double dBValue = 20*log10(re);
 		if(dBValueMax<dBValue){
@@ -81,13 +85,12 @@ void wavdata(WAVheader h, FILE *fp){
 	char poststr[100];
 
 	/* The number of peaks and maximum decibel value are sent to URL as a HTTP POST string */
+	
 	sprintf(poststr, "peaks=%d&dBValueMax=%f", peaks, dBValueMax);
 	senddata(poststr, URL);
 	gotoXY(3,1);
 	printf("HTTP post is sent to %s\n", URL);
 	getchar();
 }
-
-
 
 //end of file

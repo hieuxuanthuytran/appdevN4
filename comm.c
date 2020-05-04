@@ -2,10 +2,10 @@
 #include <i386-linux-gnu/curl/curl.h>
 #include "comm.h"
 
-//this module contains all the functions for client-server
-//communications, we only use libcurl functions.
-//In order to link to libcurl functions, you need to put "-lcurl"
-//in linking command.
+/*	This module contains all the functions for client-server
+	communications, we only use libcurl functions.
+	In order to link to libcurl functions, you need to put "-lcurl"
+	in linking command. */
 
 void senddata(char *postdata, char *url){
 	CURL *curl;

@@ -1,5 +1,5 @@
-//constant definitions
+/*	1. Constant definitions */
 #define URL "http://www.cc.puv.fi/~gc/php/raspsound.php"
 
-//function declarations
+/*	2. Function declarations */
 void senddata(char *, char *);

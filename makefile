@@ -1,5 +1,5 @@
 OBJ = screen.o main.o comm.o sound.o
-APPNAME = sound
+APPNAME = program
 
 #linking rule
 $(APPNAME) : $(OBJ)

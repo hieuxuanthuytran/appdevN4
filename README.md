@@ -106,4 +106,4 @@ In Linux:
 	
 # 7. Credits and acknowledgments.
 
-Finally, I would like to thank Mr. Chao Gao for his supports as well as the knowledge he taught and especially his patience with his students throughout the course.
+Finally, I would like to thank Mr. Chao Gao for his supports as well as the knowledge he taught, especially his patience with students throughout the course.
